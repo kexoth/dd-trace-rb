@@ -92,7 +92,7 @@ RSpec.configure do |config|
   config.around do |example|
     example.run.tap do
       # Exclude acceptable background threads
-      background_threads = Thread.list.reject do |t|
+      background_threads = [].reject do |t|
         group_name = t.group.instance_variable_get(:@group_name) if t.group.instance_variable_defined?(:@group_name)
         backtrace = t.backtrace || []
 

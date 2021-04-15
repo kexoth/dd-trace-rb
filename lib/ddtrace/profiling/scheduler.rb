@@ -62,6 +62,10 @@ module Datadog
         @skip_next_flush = true
       end
 
+      def work_pending?
+        skip_next_flush? || !recorder.empty?
+      end
+
       private
 
       def flush_and_wait

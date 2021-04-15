@@ -4,7 +4,7 @@ gemspec
 
 # Development dependencies
 gem 'addressable', '~> 2.4.0' # locking transitive dependency of webmock
-gem 'appraisal', '~> 2.2'
+gem 'appraisal', git: 'https://github.com/marcotc/appraisal', branch: 'directory-based-naming'
 gem 'benchmark-ips', '~> 2.8'
 gem 'benchmark-memory', '~> 0.1'
 gem 'builder'
